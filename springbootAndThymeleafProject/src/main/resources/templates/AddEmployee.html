@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<div class="container my-5">
+<h1>Add Employee Page</h1>
+<hr>
+<form action="#" th:action="@{/addNewEmployee}" th:object="${employee}" method="post">
+<label>First Name</label>
+<div class="form-group row">
+<input type="text" th:field="*{firstName}" class="form-control col-lg-5" placeholder="Please enter your name">
+</div>
+<label>Last Name</label>
+<div class="form-group row">
+<input type="text" th:field="*{lastName}" class="form-control col-lg-5" placeholder="please enter your surname">
+</div>
+<label>Email</label>
+<div class="form-group row">
+<input type="email" th:field="*{email}" class="form-control col-lg-5" placeholder="please enter your email">
+</div>
+<button type="submit" class="btn btn-primary my-4">Save Employee</button><br>
+<a  th:href="@{/}"class="color-dark">Back to Home</a>
+</form>
+
+</div>
+
+</body>
+</html>
